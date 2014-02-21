@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }} | {{ INTRO }}</title>
+    <meta name="keyword" content="{{ KEYWORD }}">
+    <meta name="description" content="{{ DESCRIPTION }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/foundation-icons.css" />
+    <link rel="stylesheet" href="/static/css/markdown.css" />
+    <link rel="stylesheet" href="/static/css/common.css" />
+    {% block css %}
+    {% endblock %}
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+<header>
+    <div class="avatar"><img src="https://0.gravatar.com/avatar/71eadc4dcb2ad0e0633a682c7ff80ced?d=https%3A%2F%2Fidenticons.github.com%2F1c06d6bd64c828a40bda6b9a40b75172.png&r=x&s=440"></div>
+    <article>
+        <h2>{{ INTRO }}<h2>
+        <a href="mailto:{{ EMAIL }}"><address><small>{{ EMAIL }}</small></address></a>
+    </article>
+    <nav>
+        <ul>
+            <li><a href="/">Posts</a></li>
+            <li><a href="/timeline">Timeline</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        <div class="form-group">
+        <input type="text" name="keyword">
+        <button type="submit"><i class="fi-magnifying-glass"></i></button>
+        </div>
+    </nav>
+</header>
+<div class="container">
+{% block body %}
+{% endblock %}
+</div>
+<footer>
+    <a class="rss fi-rss" href="/rss.xml"></a>
+    <p><small>Powered By <a href="http://github.com/RicterZ/rixb-webpy">rixb</a></small></p>
+    <p><small>All content copyright {{ EMAIL }} © 2014 • All rights reserved. </small></p>
+    <p class="friends">Friends: 
+        {% if FRIENDS %}
+        Friends:
+        {% for friend in FRIENDS %}
+        <a target="_blank" href="http://{{ friend.link }}">{{ friend.friend_name }}</a>
+        {% if not loop.last %}|{% endif %}
+        {% endfor %}
+        {% endif %}
+    </p>
+</footer>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/rixb.js"></script>
+{% block script %}
+{% endblock %}
+</body>
+</html>
