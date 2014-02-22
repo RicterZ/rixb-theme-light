@@ -37,7 +37,7 @@ span.day {
 a.title {
     display: inline-block;
     font-weight: 100;
-    max-width: 400px;
+    max-width: 350px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
