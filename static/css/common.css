@@ -57,13 +57,12 @@ header nav {
 header nav > ul {
 	display: inline-block;
 }
-header nav .form-group {
-	display: inline-block;
+nav > .form-group {
 	position: absolute;
 	right: 0;
 	margin: 12px 20px 0;
 }
-header nav input {
+.form-group input {
 	display: inline-block;
 	background: #333;
 	background: linear-gradient(#222, #333);
@@ -75,7 +74,7 @@ header nav input {
 	border: none;
 	box-shadow: 0 0 0 3px #555;
 }
-header nav button {
+.form-group button {
 	font-size: 18px;
 	float: left;
 	height: 26px;
@@ -156,10 +155,8 @@ footer .friends {
 header nav {
 	display: block;
 }
-header nav .form-group {
-	display: inline-block;
-	position: static;
-	margin: 20px auto 0;
+nav .form-group {
+	display: none;
 }
 header nav .form-group:after {
 	content: "";

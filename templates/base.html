@@ -22,17 +22,17 @@
         <a href="mailto:{{ EMAIL }}"><address><small>{{ EMAIL }}</small></address></a>
     </article>
     <nav>
+        <div class="form-group">
+            <form method="post" action="/search">
+                <input type="text" name="kw" placeholder="Search">
+                <button type="submit"><i class="fi-magnifying-glass"></i></button>
+            </form>
+        </div>
         <ul>
             <li><a href="/">Posts</a></li>
             <li><a href="/timeline">Timeline</a></li>
             <li><a href="/about">About</a></li>
         </ul>
-        <div class="form-group">
-        <form method="post" action="/search">
-        <input type="text" name="kw" placeholder="Search">
-        <button type="submit"><i class="fi-magnifying-glass"></i></button>
-        </form>
-        </div>
     </nav>
 </header>
 <div class="container">
