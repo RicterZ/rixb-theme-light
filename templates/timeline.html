@@ -6,8 +6,7 @@
 
 
 {% block body %}
-<div class="timeline">
-    <ul>
+    <ul class="timeline">
     {% set b=0 %}
     {% for item in data %}
         {% set a = item.date.split('-')[1] %}
@@ -18,5 +17,4 @@
         {% set b = item.date.split('-')[1] %}
     {% endfor %}
     </ul>
-</div>
 {% endblock %}

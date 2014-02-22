@@ -15,8 +15,8 @@
     {% endblock %}
 </head>
 <body>
-<header>
-    <div class="avatar"><img src="https://0.gravatar.com/avatar/71eadc4dcb2ad0e0633a682c7ff80ced?d=https%3A%2F%2Fidenticons.github.com%2F1c06d6bd64c828a40bda6b9a40b75172.png&r=x&s=440"></div>
+<header>:
+    <div class="avatar"><img src="http://www.gravatar.com/avatar/{{ EMAIL_MD5 }}?d=http://anime.mmmoe.info/static/img/w/w5.jpg&r=x&s=440"></div>
     <article>
         <h2>{{ INTRO }}<h2>
         <a href="mailto:{{ EMAIL }}"><address><small>{{ EMAIL }}</small></address></a>
@@ -28,8 +28,10 @@
             <li><a href="/about">About</a></li>
         </ul>
         <div class="form-group">
-        <input type="text" name="keyword">
+        <form method="post" action="/search">
+        <input type="text" name="kw" placeholder="Search">
         <button type="submit"><i class="fi-magnifying-glass"></i></button>
+        </form>
         </div>
     </nav>
 </header>

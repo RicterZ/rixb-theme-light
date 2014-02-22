@@ -5,6 +5,7 @@
 }
 body {
 	font-family:"Microsoft Yahei","SimHei",sans-serif;
+	min-width: 300px;
 }
 a {
 	text-decoration:none;
@@ -36,6 +37,20 @@ header small {
 header address {
 	display:inline-block;
 }
+header li {
+	padding:5px 10px;
+	margin:5px 10px;
+	display:inline-block;
+}
+header li > a {
+	-webkit-transition:color 400ms;
+	-moz-transition:color 400ms;
+	transition:color 400ms;
+	color:#FFF;
+}
+header li > a:hover {
+	color:#CCC;
+}
 header nav {
 	text-align:center;
 }
@@ -53,46 +68,41 @@ header nav input {
 	background: #333;
 	background: linear-gradient(#222, #333);
 	border-radius: 30px 0 0 30px;
-	height: 12px; 
+	height: 16px; 
 	width: 160px;
 	padding: 5px 10px;
-	border: 3px solid #555;
-	border-right: none;
 	float: left;
+	border: none;
+	box-shadow: 0 0 0 3px #555;
 }
 header nav button {
 	font-size: 18px;
 	float: left;
-	height: 27px;
+	height: 26px;
 	padding: 0 20px;
 	background: #333;
 	background: linear-gradient(#222, #333);
 	border-radius: 0 30px 30px 0;
-	border: 3px solid #555;
-	border-left: none;
-}
-header li {
-	padding:5px 10px 0;
-	margin:5px 10px 0;
-	display:inline-block;
-}
-header li > a {
-	-webkit-transition:color 400ms;
-	-moz-transition:color 400ms;
-	transition:color 400ms;
-	color:#FFF;
-}
-header li > a:hover {
-	color:#CCC;
+	border: none;
+	box-shadow: 3px 0 0 3px #555;
 }
 .avatar {
+	box-shadow: 0 0 10px #000;
 	width:150px;
 	height:150px;
 	margin:20px auto;
 	overflow:hidden;
-	border:3px solid #FFF;
+	border:4px solid #FFF;
 	border-radius:100%;
 	background:#777C81;
+	-webkit-transition: -webkit-transform 400ms;
+	-moz-transition: -moz-transform 400ms;
+	transition: transform 400ms;
+}
+.avatar:hover {
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+	transform: rotate(30deg);
 }
 .avatar img {
 	width:100%;
@@ -155,7 +165,7 @@ header nav .form-group:after {
 	content: "";
 }
 header nav input {
-	width: 200px;
+	width: 180px;
 }
 
 }
