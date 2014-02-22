@@ -9,13 +9,17 @@
     <link rel="stylesheet" href="/static/css/foundation-icons.css" />
     <link rel="stylesheet" href="/static/css/markdown.css" />
     <link rel="stylesheet" href="/static/css/common.css" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
     {% block css %}
     {% endblock %}
     {% block style %}
     {% endblock %}
 </head>
 <body>
-<header>:
+<header>
     <div class="avatar"><img src="http://www.gravatar.com/avatar/{{ EMAIL_MD5 }}?d=http://anime.mmmoe.info/static/img/w/w5.jpg&r=x&s=440"></div>
     <article>
         <h2>{{ INTRO }}<h2>
