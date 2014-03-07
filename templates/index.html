@@ -20,6 +20,9 @@
         <section class="content">
             {{ item.content|safe }}
         </section>
+        {% if DISQUS %}
+        	<div id="disqus_thread"></div>
+        {% endif %}
     </article>
 {% endfor %}
 {% if page and data %}
@@ -33,7 +36,7 @@
 </div>
 {% if DISQUS %}
 <script type="text/javascript">
-    {{ DISQUS }}
+    {{ DISQUS|safe }}
 </script>
 {% endif %}
 {% endblock %}
